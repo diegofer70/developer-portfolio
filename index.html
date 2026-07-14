@@ -1,146 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfólio profissional de Diego Araújo, desenvolvedor front-end focado em interfaces modernas e acessíveis." />
     <title>Diego Araújo | Desenvolvedor Front-end</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
 
     <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    
-    <header>
-        <nav>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="logo" href="#home">Diego<span>Araújo</span></a>
 
-            <h2>Portfolio</h2>
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-            <ul>
-                <li><a href="sobre">Sobre</a></li>
-                <li><a href="#skills">Tecnologias</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-
+        <nav class="nav-links" aria-label="Navegação principal">
+          <a href="#home">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#skills">Tecnologias</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
         </nav>
+
+        <button class="theme-toggle" id="theme-toggle" aria-label="Ativar tema escuro">
+          <span>☀️</span>
+        </button>
+      </div>
     </header>
 
-    <section class="hero">
-
-        <div class="hero-text">
-            <h1>Olá, eu sou <span>Diego Araújo</span></h1>
-
-            <h3>Desenvolvedor Front-end</h3>
-
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="hero-badge">Disponível para estágio e oportunidades júnior</span>
+            <h1>Olá, eu sou <span class="accent">Diego Araújo</span></h1>
+            <h2>Desenvolvedor Front-end</h2>
             <p>
-                Crio interfaces modernas, responsivas e acessíveis utilizando HTML, CSS e JavaScript.
+              Crio experiências web modernas, responsivas e acessíveis com foco em performance, UX e código limpo.
             </p>
 
-            <a href="#projetos">Ver Projetos</a>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projetos">Ver Projetos</a>
+              <a class="btn btn-secondary" href="./assets/cv.pdf" download>Baixar Currículo</a>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+              <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <img class="hero-illustration" src="./assets/images/hero-illustration.svg" alt="Ilustração de um desenvolvedor front-end" loading="eager" />
+          </div>
         </div>
+      </section>
 
-    </section>
+      <section id="sobre" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Sobre mim</h2>
+            <p>Sou um desenvolvedor front-end em formação, apaixonado por transformar ideias em interfaces claras, elegantes e com excelente experiência de usuário.</p>
+          </div>
 
-    <section id="sobre">
-
-        <h2>Sobre mim</h2>
-
-        <p>
-            Sou estudante de desenvolvimento web, apaixonado por criar experiências digitais envolventes e funcionais. Com habilidades em HTML, CSS e JavaScript, busco constantemente aprimorar meus conhecimentos e contribuir para projetos inovadores.
-        </p>
-
-    </section>
-
-    <section id="skills">
-
-        <h2>Tecnologias</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML</h3>
+          <div class="about-grid">
+            <div class="about-card reveal">
+              <h3>Minha trajetória</h3>
+              <p>Atuo com HTML, CSS, JavaScript e boas práticas de desenvolvimento, sempre buscando evoluir com projetos que unem estética e funcionalidade.</p>
             </div>
-
-            <div class="card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS</h3>
+            <div class="about-card reveal">
+              <h3>Objetivos</h3>
+              <p>Construir soluções profissionais para web, crescer em equipe e contribuir com projetos que tenham impacto real para os usuários.</p>
             </div>
-
-            <div class="card">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
+            <div class="about-card reveal">
+              <h3>Qualidades</h3>
+              <p>Responsabilidade, atenção aos detalhes, comunicação clara e constante busca por aprendizado e melhoria contínua.</p>
             </div>
-
-            <div class="card">
-                <i class="fab fa-react"></i>
-                <h3>React</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-node-js"></i>
-                <h3>Node.js</h3>
-            </div>
-
-            <div class="card">
-                <i class="fab fa-git-alt"></i>
-                <h3>Git</h3>
-            </div>
+          </div>
         </div>
+      </section>
 
-    </section>
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Tecnologias</h2>
+            <p>Ferramentas e conceitos que utilizo para criar interfaces modernas, performáticas e acessíveis.</p>
+          </div>
 
-    <section id="projetos">
+          <div class="cards-grid">
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-html5"></i></div>
+              <h3>HTML5</h3>
+            </article>
 
-        <h2>Projetos</h2>
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-css3-alt"></i></div>
+              <h3>CSS3</h3>
+            </article>
 
-        <div class="cards">
-            <div class="projeto">
-                <h3>Landing Page</h3>
-                <p>Landing Page moderna utilizando HTML e CSS.</p>
-                <a href="#">Ver Projeto ou Github</a>
-            </div>
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-js"></i></div>
+              <h3>JavaScript</h3>
+            </article>
 
-            <div class="projeto">
-                <h3>Calculadora</h3>
-                <p>Calculadora funcional utilizando JavaScript.</p>
-                <a href="#">Ver Projeto ou Github</a>
-            </div>
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-react"></i></div>
+              <h3>React</h3>
+            </article>
 
-            <div class="projeto">
-                <h3>To-Do List</h3>
-                <p>Aplicativo de lista de tarefas utilizando React.</p>
-                <a href="#">Ver Projeto ou Github</a>
-            </div>
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-git-alt"></i></div>
+              <h3>Git</h3>
+            </article>
+
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fab fa-github"></i></div>
+              <h3>GitHub</h3>
+            </article>
+
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fas fa-mobile-alt"></i></div>
+              <h3>Responsividade</h3>
+            </article>
+
+            <article class="card reveal">
+              <div class="icon-wrap"><i class="fas fa-pencil-ruler"></i></div>
+              <h3>Figma</h3>
+            </article>
+          </div>
         </div>
+      </section>
 
-    </section>
+      <section id="projetos" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Projetos</h2>
+            <p>Exemplos recentes de trabalho com foco em layout, interação e apresentação visual.</p>
+          </div>
 
-    <section id="contato">
+          <div class="cards-grid projects-grid">
+            <article class="project-card reveal">
+              <img src="./assets/images/project-landing.svg" alt="Landing page moderna" loading="lazy" />
+              <h3>Landing Page</h3>
+              <p>Landing page com estrutura elegante, navegação objetiva e foco em conversão.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="#">GitHub</a>
+                <a class="btn btn-primary" href="#">Demo</a>
+              </div>
+            </article>
 
-        <h2>Contato</h2>
+            <article class="project-card reveal">
+              <img src="./assets/images/project-calculator.svg" alt="Calculadora interativa" loading="lazy" />
+              <h3>Calculadora</h3>
+              <p>Aplicação funcional com lógica bem organizada e interface intuitiva.</p>
+              <div class="tag-list">
+                <span class="tag">JavaScript</span>
+                <span class="tag">UI</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="#">GitHub</a>
+                <a class="btn btn-primary" href="#">Demo</a>
+              </div>
+            </article>
 
-        <p>
-            Estou disponível para oportunidades de trabalho. Entre em contato comigo através do e-mail ou redes sociais.
-        </p>
+            <article class="project-card reveal">
+              <img src="./assets/images/project-todo.svg" alt="Aplicativo de tarefas" loading="lazy" />
+              <h3>To-Do List</h3>
+              <p>Lista de tarefas com organização visual e uma experiência limpa para o usuário.</p>
+              <div class="tag-list">
+                <span class="tag">React</span>
+                <span class="tag">State</span>
+              </div>
+              <div class="project-actions">
+                <a class="btn btn-secondary" href="#">GitHub</a>
+                <a class="btn btn-primary" href="#">Demo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <p>Email: seuemail@email.com</p>
+      <section class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Estatísticas</h2>
+            <p>Alguns números que refletem minha dedicação ao aprendizado e desenvolvimento web.</p>
+          </div>
 
-        <p>GitHub: github.com/seuusuario</p>
+          <div class="stats-grid">
+            <article class="stat-card reveal">
+              <strong>+12</strong>
+              <span>Projetos concluídos</span>
+            </article>
+            <article class="stat-card reveal">
+              <strong>8+</strong>
+              <span>Tecnologias dominadas</span>
+            </article>
+            <article class="stat-card reveal">
+              <strong>3</strong>
+              <span>Certificados</span>
+            </article>
+            <article class="stat-card reveal">
+              <strong>500+</strong>
+              <span>Horas de estudo</span>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <p>LinkedIn: linkedin.com/in/seuperfil</p>
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Contato</h2>
+            <p>Vamos conversar sobre oportunidades, projetos ou uma possível colaboração.</p>
+          </div>
 
-    </section>
+          <div class="contact-grid">
+            <div class="contact-card reveal">
+              <h3>Vamos conversar</h3>
+              <p>Estou aberto para estágio, vagas júnior e projetos freelance. Respondo rapidamente por e-mail ou redes sociais.</p>
+              <ul class="contact-list">
+                <li><i class="fas fa-envelope"></i> seuemail@email.com</li>
+                <li><i class="fab fa-github"></i> github.com/seuusuario</li>
+                <li><i class="fab fa-linkedin"></i> linkedin.com/in/seuperfil</li>
+              </ul>
+            </div>
 
-    <footer>
-        <p>&copy; 2024 Diego Araújo. Todos os direitos reservados.</p>
+            <form id="contact-form" class="contact-form reveal">
+              <label>
+                Nome
+                <input type="text" name="name" placeholder="Seu nome" required />
+              </label>
+              <label>
+                E-mail
+                <input type="email" name="email" placeholder="seu@email.com" required />
+              </label>
+              <label>
+                Mensagem
+                <textarea name="message" placeholder="Escreva sua mensagem" required></textarea>
+              </label>
+              <button class="btn btn-primary submit-btn" type="submit">Enviar mensagem</button>
+              <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        <button id="topo">
-        ↑
-        </button>
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Diego Araújo. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="https://github.com/" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <button id="topo" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/theme.js"></script>
+  </body>
 </html>
