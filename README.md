@@ -29,4 +29,4 @@ Em breve
 
 ## 👨‍💻 Autor
 
-Seu Nome
+Diego Ferreira de Araújo
