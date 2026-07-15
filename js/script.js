@@ -40,28 +40,28 @@
   ===================================================== */
   const projects = [
     {
-      title: "KOVA Store",
-      description: "E-commerce completo com carrinho, favoritos e checkout, construído com padrões de React e TypeScript.",
-      image: "assets/images/projects/kova-store.jpg",
-      tags: ["React", "TypeScript", "CSS"],
-      github: "https://github.com/diegofer70",
-      vercel: "#"
+      title: "MedManager - Sistema Clínico Integrado",
+      description: "O MedManager é um protótipo de sistema de gestão para clínicas médicas desenvolvido como uma Single Page Application (SPA) utilizando tecnologias web nativas. O sistema centraliza o controle de acessos, gerenciamento de agendas (diária e semanal), prontuários eletrônicos e um módulo de comunicação integrada no estilo WhatsApp Web.",
+      image: "assets/images/projects/medmanager.png",
+      tags: ["HTML5", "CSS3", "JavaScript", "FontAwesome"],
+      github: "https://github.com/diegofer70/medmanager-sistema-clinico",
+      vercel: "https://medmanager-sistema-clinico.vercel.app/"
     },
     {
-      title: "KOVA Sales Dashboard",
-      description: "Dashboard de BI interativo com KPIs, gráficos de barras e donut, e consultas SQL equivalentes.",
-      image: "assets/images/projects/kova-dashboard.jpg",
-      tags: ["JavaScript", "Charts", "SQL"],
-      github: "https://github.com/diegofer70",
-      vercel: "#"
-    },
-    {
-      title: "LogiFlow",
-      description: "Sistema de gestão logística com sete módulos: dashboard, pedidos, frota, rotas, estoque, fornecedores e relatórios.",
-      image: "assets/images/projects/logiflow.jpg",
+      title: "Landing Page Delivery",
+      description: "Landing Page Delivery é um projeto para criar e implementar páginas de destino eficazes e atraentes. Este projeto foi desenvolvido para facilitar a criação, personalização e implementação de landing pages que podem ser usadas para capturar leads, promover produtos ou serviços, e melhorar a conversão de usuários.",
+      image: "assets/images/projects/landing-page-delivery.png",
       tags: ["HTML5", "CSS3", "JavaScript"],
-      github: "https://github.com/diegofer70",
-      vercel: "#"
+      github: "https://github.com/diegofer70/desafio-landing-page",
+      vercel: "https://desafio-landing-page.vercel.app/"
+    },
+    {
+      title: "Bem Libras",
+      description: "Bem Libras é um serviço especializado em atendimento ao público com interpretação em Libras, promovendo acessibilidade, inclusão e comunicação eficiente para pessoas surdas.",
+      image: "assets/images/projects/BemLibras.png",
+      tags: ["HTML5", "CSS3", "JavaScript"],
+      github: "https://github.com/diegofer70/BemLibras",
+      vercel: "https://bemlibras.vercel.app/"
     }
   ];
 
