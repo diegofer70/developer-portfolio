@@ -1,8 +1,4 @@
-# 💼 Developer Portfolio
-
-Portfólio pessoal desenvolvido para apresentar minhas habilidades como Desenvolvedor Front-end.
-
-## 📷 Preview
+# 💼 Portfólio - Diego Araújo
 
 ![Portfolio Preview](./assets/portfolio_preview.png)
 
