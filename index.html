@@ -1,285 +1,370 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfólio profissional de Diego Araújo, desenvolvedor front-end focado em interfaces modernas e acessíveis." />
-    <title>Diego Araújo | Desenvolvedor Front-end</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego • Desenvolvedor Front-end</title>
+  <meta name="description" content="Portfólio de Diego, desenvolvedor front-end especializado em HTML, CSS, JavaScript e React. Confira projetos, tecnologias e formas de contato.">
+  <meta name="theme-color" content="#0B0F19">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/responsive.css" />
-    <link rel="stylesheet" href="./css/animations.css" />
-    <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diego • Desenvolvedor Front-end">
+  <meta property="og:description" content="Portfólio profissional de desenvolvimento front-end.">
+  <meta property="og:type" content="website">
 
-    <script src="https://kit.fontawesome.com/6d2ea823d0.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container navbar">
-        <a class="logo" href="#home">Diego<span>Araújo</span></a>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-theme="dark">
+
+  <!-- ============ SKIP LINK (acessibilidade) ============ -->
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Página inicial">
+        <span class="logo__bracket">&lt;</span>Diego<span class="logo__bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active" data-nav>Início</a></li>
+          <li><a href="#sobre" class="nav__link" data-nav>Sobre</a></li>
+          <li><a href="#tecnologias" class="nav__link" data-nav>Tecnologias</a></li>
+          <li><a href="#projetos" class="nav__link" data-nav>Projetos</a></li>
+          <li><a href="#estatisticas" class="nav__link" data-nav>Estatísticas</a></li>
+          <li><a href="#contato" class="nav__link" data-nav>Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro" aria-pressed="false">
+          <svg class="icon icon--sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+          <svg class="icon icon--moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
         </button>
 
-        <nav class="nav-links" aria-label="Navegação principal">
-          <a href="#home">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#skills">Tecnologias</a>
-          <a href="#projetos">Projetos</a>
-          <a href="#contato">Contato</a>
-        </nav>
-
-        <button class="theme-toggle" id="theme-toggle" aria-label="Ativar tema escuro">
-          <span>☀️</span>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
         </button>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section id="home" class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <span class="hero-badge">Disponível para estágio e oportunidades júnior</span>
-            <h1>Olá, eu sou <span class="accent">Diego Araújo</span></h1>
-            <h2>Desenvolvedor Front-end</h2>
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__text reveal" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot"></span>Disponível para estágio e vagas júnior</p>
+          <h1 class="hero__title">
+            Olá, eu sou <span class="text-gradient">Diego</span><br>
+            Desenvolvedor <span class="text-gradient">Front-end</span>
+          </h1>
+          <p class="hero__desc">
+            Transformo ideias em interfaces limpas, rápidas e acessíveis.
+            Foco em código organizado, boas práticas e atenção real aos detalhes —
+            do design ao deploy.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projetos" class="btn btn--primary">
+              Ver Projetos
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="assets/cv.pdf" class="btn btn--ghost" download>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
+              Baixar Currículo
+            </a>
+          </div>
+
+          <div class="hero__social" aria-label="Redes sociais">
+            <a href="https://github.com/diegofer70" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/diego" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+            <a href="mailto:diego@example.com" aria-label="E-mail" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" data-reveal data-reveal-delay="150">
+          <div class="code-window" role="img" aria-label="Ilustração de um editor de código mostrando o perfil do desenvolvedor">
+            <div class="code-window__bar">
+              <span class="code-dot code-dot--red"></span>
+              <span class="code-dot code-dot--yellow"></span>
+              <span class="code-dot code-dot--green"></span>
+              <span class="code-window__title">diego.dev.js</span>
+            </div>
+            <pre class="code-window__body"><code><span class="tk-kw">const</span> <span class="tk-var">diego</span> = {
+  <span class="tk-prop">função</span>: <span class="tk-str">"Dev Front-end"</span>,
+  <span class="tk-prop">foco</span>: [<span class="tk-str">"HTML"</span>, <span class="tk-str">"CSS"</span>, <span class="tk-str">"JS"</span>, <span class="tk-str">"React"</span>],
+  <span class="tk-prop">disponível</span>: <span class="tk-kw">true</span>,
+  <span class="tk-prop">aprendendo</span>: <span class="tk-str">"TypeScript"</span>,
+
+  <span class="tk-fn">contratar</span>() {
+    <span class="tk-kw">return</span> <span class="tk-str">"vamos conversar 👋"</span>;
+  }
+};</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="scroll-cue" aria-label="Rolar para a seção Sobre">
+        <span class="scroll-cue__mouse"><span></span></span>
+      </a>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <p class="section-label reveal" data-reveal>// 01 sobre-mim</p>
+        <h2 class="section-title reveal" data-reveal>Quem é Diego</h2>
+
+        <div class="about__grid">
+          <div class="about__text reveal" data-reveal>
             <p>
-              Crio experiências web modernas, responsivas e acessíveis com foco em performance, UX e código limpo.
+              Sou desenvolvedor front-end em formação contínua, apaixonado por transformar
+              layouts e ideias em interfaces reais, funcionais e agradáveis de usar. Gosto de
+              entender o "porquê" por trás de cada decisão de UI — não só encaixar componentes,
+              mas construir experiências coerentes.
+            </p>
+            <p>
+              Meu objetivo é conquistar uma oportunidade de estágio ou vaga júnior onde eu possa
+              aprender com times experientes, contribuir com código limpo e evoluir para
+              construir produtos com impacto real para os usuários.
             </p>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projetos">Ver Projetos</a>
-              <a class="btn btn-secondary" href="./assets/cv.pdf" download>Baixar Currículo</a>
-            </div>
-
-            <div class="social-links">
-              <a href="https://github.com/" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
-              <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
-            </div>
+            <ul class="about__qualities">
+              <li><strong>Atenção aos detalhes</strong> — pixels, espaçamentos e estados importam.</li>
+              <li><strong>Curiosidade técnica</strong> — gosto de entender como as coisas funcionam por dentro.</li>
+              <li><strong>Colaboração</strong> — código é feito para ser lido por outras pessoas também.</li>
+              <li><strong>Consistência</strong> — pratico todos os dias, mesmo que pouco.</li>
+            </ul>
           </div>
 
-          <div class="hero-visual reveal">
-            <img class="hero-illustration" src="./assets/images/hero-illustration.svg" alt="Ilustração de um desenvolvedor front-end" loading="eager" />
-          </div>
-        </div>
-      </section>
-
-      <section id="sobre" class="section">
-        <div class="container">
-          <div class="section-title reveal">
-            <h2>Sobre mim</h2>
-            <p>Sou um desenvolvedor front-end em formação, apaixonado por transformar ideias em interfaces claras, elegantes e com excelente experiência de usuário.</p>
-          </div>
-
-          <div class="about-grid">
-            <div class="about-card reveal">
-              <h3>Minha trajetória</h3>
-              <p>Atuo com HTML, CSS, JavaScript e boas práticas de desenvolvimento, sempre buscando evoluir com projetos que unem estética e funcionalidade.</p>
-            </div>
-            <div class="about-card reveal">
-              <h3>Objetivos</h3>
-              <p>Construir soluções profissionais para web, crescer em equipe e contribuir com projetos que tenham impacto real para os usuários.</p>
-            </div>
-            <div class="about-card reveal">
-              <h3>Qualidades</h3>
-              <p>Responsabilidade, atenção aos detalhes, comunicação clara e constante busca por aprendizado e melhoria contínua.</p>
+          <div class="about__favorites reveal" data-reveal data-reveal-delay="150">
+            <h3 class="about__favorites-title">Tecnologias favoritas</h3>
+            <div class="chip-group">
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">CSS Grid</span>
+              <span class="chip">Git</span>
+              <span class="chip">Figma</span>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section">
-        <div class="container">
-          <div class="section-title reveal">
-            <h2>Tecnologias</h2>
-            <p>Ferramentas e conceitos que utilizo para criar interfaces modernas, performáticas e acessíveis.</p>
-          </div>
-
-          <div class="cards-grid">
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-html5"></i></div>
-              <h3>HTML5</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-css3-alt"></i></div>
-              <h3>CSS3</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-js"></i></div>
-              <h3>JavaScript</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-react"></i></div>
-              <h3>React</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-git-alt"></i></div>
-              <h3>Git</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fab fa-github"></i></div>
-              <h3>GitHub</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fas fa-mobile-alt"></i></div>
-              <h3>Responsividade</h3>
-            </article>
-
-            <article class="card reveal">
-              <div class="icon-wrap"><i class="fas fa-pencil-ruler"></i></div>
-              <h3>Figma</h3>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projetos" class="section">
-        <div class="container">
-          <div class="section-title reveal">
-            <h2>Projetos</h2>
-            <p>Exemplos recentes de trabalho com foco em layout, interação e apresentação visual.</p>
-          </div>
-
-          <div class="cards-grid projects-grid">
-            <article class="project-card reveal">
-              <img src="./assets/images/project-landing.svg" alt="Landing page moderna" loading="lazy" />
-              <h3>Landing Page</h3>
-              <p>Landing page com estrutura elegante, navegação objetiva e foco em conversão.</p>
-              <div class="tag-list">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="#">GitHub</a>
-                <a class="btn btn-primary" href="#">Demo</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <img src="./assets/images/project-calculator.svg" alt="Calculadora interativa" loading="lazy" />
-              <h3>Calculadora</h3>
-              <p>Aplicação funcional com lógica bem organizada e interface intuitiva.</p>
-              <div class="tag-list">
-                <span class="tag">JavaScript</span>
-                <span class="tag">UI</span>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="#">GitHub</a>
-                <a class="btn btn-primary" href="#">Demo</a>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <img src="./assets/images/project-todo.svg" alt="Aplicativo de tarefas" loading="lazy" />
-              <h3>To-Do List</h3>
-              <p>Lista de tarefas com organização visual e uma experiência limpa para o usuário.</p>
-              <div class="tag-list">
-                <span class="tag">React</span>
-                <span class="tag">State</span>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="#">GitHub</a>
-                <a class="btn btn-primary" href="#">Demo</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-title reveal">
-            <h2>Estatísticas</h2>
-            <p>Alguns números que refletem minha dedicação ao aprendizado e desenvolvimento web.</p>
-          </div>
-
-          <div class="stats-grid">
-            <article class="stat-card reveal">
-              <strong>+12</strong>
-              <span>Projetos concluídos</span>
-            </article>
-            <article class="stat-card reveal">
-              <strong>8+</strong>
-              <span>Tecnologias dominadas</span>
-            </article>
-            <article class="stat-card reveal">
-              <strong>3</strong>
-              <span>Certificados</span>
-            </article>
-            <article class="stat-card reveal">
-              <strong>500+</strong>
-              <span>Horas de estudo</span>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="section">
-        <div class="container">
-          <div class="section-title reveal">
-            <h2>Contato</h2>
-            <p>Vamos conversar sobre oportunidades, projetos ou uma possível colaboração.</p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card reveal">
-              <h3>Vamos conversar</h3>
-              <p>Estou aberto para estágio, vagas júnior e projetos freelance. Respondo rapidamente por e-mail ou redes sociais.</p>
-              <ul class="contact-list">
-                <li><i class="fas fa-envelope"></i> seuemail@email.com</li>
-                <li><i class="fab fa-github"></i> github.com/seuusuario</li>
-                <li><i class="fab fa-linkedin"></i> linkedin.com/in/seuperfil</li>
-              </ul>
-            </div>
-
-            <form id="contact-form" class="contact-form reveal">
-              <label>
-                Nome
-                <input type="text" name="name" placeholder="Seu nome" required />
-              </label>
-              <label>
-                E-mail
-                <input type="email" name="email" placeholder="seu@email.com" required />
-              </label>
-              <label>
-                Mensagem
-                <textarea name="message" placeholder="Escreva sua mensagem" required></textarea>
-              </label>
-              <button class="btn btn-primary submit-btn" type="submit">Enviar mensagem</button>
-              <p id="form-status" class="form-status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-content">
-        <p>© <span id="year"></span> Diego Araújo. Todos os direitos reservados.</p>
-        <div class="footer-links">
-          <a href="https://github.com/" target="_blank" rel="noreferrer"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:seuemail@email.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-    </footer>
+    </section>
 
-    <button id="topo" class="back-to-top" aria-label="Voltar ao topo">↑</button>
+    <!-- ============ TECNOLOGIAS ============ -->
+    <section class="section section--alt" id="tecnologias">
+      <div class="container">
+        <p class="section-label reveal" data-reveal>// 02 stack</p>
+        <h2 class="section-title reveal" data-reveal>Tecnologias &amp; Ferramentas</h2>
+        <p class="section-subtitle reveal" data-reveal>O que eu uso no dia a dia para construir interfaces.</p>
 
-    <script src="./js/script.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/theme.js"></script>
-  </body>
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🟧</div>
+            <h3>HTML5</h3>
+            <p>Marcação semântica e acessível.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🟦</div>
+            <h3>CSS3</h3>
+            <p>Grid, Flexbox e animações.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🟨</div>
+            <h3>JavaScript</h3>
+            <p>ES6+, DOM e lógica de aplicação.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🔷</div>
+            <h3>TypeScript</h3>
+            <p>Tipagem estática para JS.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">⚛️</div>
+            <h3>React</h3>
+            <p>Componentização e hooks.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🌿</div>
+            <h3>Git</h3>
+            <p>Controle de versão e branches.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🐙</div>
+            <h3>GitHub</h3>
+            <p>Versionamento e colaboração.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">📱</div>
+            <h3>Responsividade</h3>
+            <p>Mobile-first, todos os dispositivos.</p>
+          </div>
+          <div class="skill-card reveal" data-reveal>
+            <div class="skill-card__icon" aria-hidden="true">🎨</div>
+            <h3>Figma</h3>
+            <p>Prototipação e handoff de design.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <p class="section-label reveal" data-reveal>// 03 projetos</p>
+        <h2 class="section-title reveal" data-reveal>Projetos em Destaque</h2>
+        <p class="section-subtitle reveal" data-reveal>Uma seleção de trabalhos práticos que aplicam o que eu domino.</p>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Os cards de projeto são renderizados via js/script.js a partir de um array de dados -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ESTATÍSTICAS ============ -->
+    <section class="section section--alt stats" id="estatisticas">
+      <div class="container">
+        <p class="section-label reveal" data-reveal>// 04 números</p>
+        <h2 class="section-title reveal" data-reveal>Em Números</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card reveal" data-reveal>
+            <span class="stat-card__number" data-count="12">0</span>
+            <span class="stat-card__label">Projetos concluídos</span>
+          </div>
+          <div class="stat-card reveal" data-reveal>
+            <span class="stat-card__number" data-count="9">0</span>
+            <span class="stat-card__label">Tecnologias dominadas</span>
+          </div>
+          <div class="stat-card reveal" data-reveal>
+            <span class="stat-card__number" data-count="6">0</span>
+            <span class="stat-card__label">Certificados</span>
+          </div>
+          <div class="stat-card reveal" data-reveal>
+            <span class="stat-card__number" data-count="800" data-suffix="+">0</span>
+            <span class="stat-card__label">Horas de estudo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <p class="section-label reveal" data-reveal>// 05 contato</p>
+        <h2 class="section-title reveal" data-reveal>Vamos Conversar</h2>
+        <p class="section-subtitle reveal" data-reveal>
+          Aberto a oportunidades de estágio, vagas júnior e projetos colaborativos.
+        </p>
+
+        <div class="contact__grid">
+          <form class="contact-form reveal" data-reveal id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Nome</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required minlength="2">
+              <span class="form-error" data-error-for="name"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+              <span class="form-error" data-error-for="email"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Conte um pouco sobre a oportunidade ou projeto..." required minlength="10"></textarea>
+              <span class="form-error" data-error-for="message"></span>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block">
+              Enviar mensagem
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+            </button>
+
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info reveal" data-reveal data-reveal-delay="150">
+            <a href="https://github.com/diegofer70" target="_blank" rel="noopener noreferrer" class="contact-info__item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+              <div>
+                <span class="contact-info__label">GitHub</span>
+                <span class="contact-info__value">github.com/diegofer70</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/diego" target="_blank" rel="noopener noreferrer" class="contact-info__item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              <div>
+                <span class="contact-info__label">LinkedIn</span>
+                <span class="contact-info__value">linkedin.com/in/diego</span>
+              </div>
+            </a>
+            <a href="mailto:diego@example.com" class="contact-info__item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+              <div>
+                <span class="contact-info__label">E-mail</span>
+                <span class="contact-info__value">diego@example.com</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--footer">
+        <span class="logo__bracket">&lt;</span>Diego<span class="logo__bracket">/&gt;</span>
+      </a>
+
+      <p class="footer__thanks">Obrigado por visitar meu portfólio — vamos construir algo juntos.</p>
+
+      <div class="footer__social">
+        <a href="https://github.com/diegofer70" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.24 2.77.12 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.8.55A10.51 10.51 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/diego" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="mailto:diego@example.com" aria-label="E-mail" class="social-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+        </a>
+      </div>
+
+      <p class="footer__copy">&copy; <span id="year"></span> Diego. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="js/theme.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
 </html>

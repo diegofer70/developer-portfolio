@@ -1,24 +1,41 @@
-const themeToggle = document.getElementById('theme-toggle');
-const storedTheme = localStorage.getItem('portfolio-theme');
-const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+/**
+ * theme.js
+ * Controla a alternância entre tema escuro (padrão) e tema claro.
+ * A preferência do usuário é salva no localStorage e respeitada
+ * em visitas futuras. Também respeita `prefers-color-scheme` na
+ * primeira visita, caso o usuário não tenha escolhido nada ainda.
+ */
+(function () {
+  "use strict";
 
-const applyTheme = (theme) => {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('portfolio-theme', theme);
+  const STORAGE_KEY = "portfolio-theme";
+  const body = document.body;
+  const toggleBtn = document.getElementById("themeToggle");
 
-  if (themeToggle) {
-    const icon = themeToggle.querySelector('span');
-    if (icon) {
-      icon.textContent = theme === 'light' ? '🌙' : '☀️';
+  function applyTheme(theme) {
+    body.setAttribute("data-theme", theme);
+    if (toggleBtn) {
+      toggleBtn.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
     }
-    themeToggle.setAttribute('aria-label', theme === 'light' ? 'Ativar tema escuro' : 'Ativar tema claro');
   }
-};
 
-const initialTheme = storedTheme || (prefersLight ? 'light' : 'dark');
-applyTheme(initialTheme);
+  function getInitialTheme() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === "dark" || saved === "light") return saved;
 
-themeToggle?.addEventListener('click', () => {
-  const nextTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-  applyTheme(nextTheme);
-});
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    return prefersLight ? "light" : "dark";
+  }
+
+  // Aplica o tema o quanto antes para evitar "flash" de tema errado.
+  applyTheme(getInitialTheme());
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      const current = body.getAttribute("data-theme") === "light" ? "light" : "dark";
+      const next = current === "light" ? "dark" : "light";
+      applyTheme(next);
+      localStorage.setItem(STORAGE_KEY, next);
+    });
+  }
+})();
