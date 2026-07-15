@@ -2,6 +2,10 @@
 
 Portfólio pessoal desenvolvido para apresentar minhas habilidades como Desenvolvedor Front-end.
 
+## 📷 Preview
+
+![Portfolio Preview](./assets/portfolio_preview.png)
+
 ## 🚀 Tecnologias
 
 - HTML5
