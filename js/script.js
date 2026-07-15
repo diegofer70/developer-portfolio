@@ -45,7 +45,7 @@
       image: "assets/images/projects/kova-store.jpg",
       tags: ["React", "TypeScript", "CSS"],
       github: "https://github.com/diegofer70",
-      demo: "#"
+      vercel: "#"
     },
     {
       title: "KOVA Sales Dashboard",
@@ -53,7 +53,7 @@
       image: "assets/images/projects/kova-dashboard.jpg",
       tags: ["JavaScript", "Charts", "SQL"],
       github: "https://github.com/diegofer70",
-      demo: "#"
+      vercel: "#"
     },
     {
       title: "LogiFlow",
@@ -61,7 +61,7 @@
       image: "assets/images/projects/logiflow.jpg",
       tags: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/diegofer70",
-      demo: "#"
+      vercel: "#"
     }
   ];
 
@@ -86,7 +86,7 @@
         </div>
         <div class="project-card__actions">
           <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">GitHub</a>
-          <a href="${project.demo}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo</a>
+          <a href="${project.vercel}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Vercel</a>
         </div>
       </div>
     `;
