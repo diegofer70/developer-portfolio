@@ -19,10 +19,6 @@
 - Contato
 - Interface moderna
 
-## 📷 Preview
-
-(Adicionar imagem do site)
-
 ## 🔗 Demonstração
 
 Em breve!
